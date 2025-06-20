@@ -111,7 +111,7 @@ void placeOrder(const string& price, const string& accessToken, const string& am
     print_pretty_response(response) ;
 }
 
-
+// Function to cancel an order
 void cancelOrder(string &accessToken , string &orderId) {
     json payload = {
         {"jsonrpc", "2.0"},
@@ -126,6 +126,7 @@ void cancelOrder(string &accessToken , string &orderId) {
     print_pretty_response(response) ;
 }
 
+// Func to sell Order
 void sellOrder(const string& accessToken, const string& price, const string& amount, const string& instrument) {
 
     json payload = {
@@ -145,6 +146,7 @@ void sellOrder(const string& accessToken, const string& price, const string& amo
     print_pretty_response(response) ;
 }
 
+// Func to get Open orders
 void getOpenOrders(const string& accessToken) {
     string url = "https://test.deribit.com/api/v2/private/get_open_orders";
 
